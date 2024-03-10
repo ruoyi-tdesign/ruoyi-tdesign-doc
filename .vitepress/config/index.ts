@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitepress'
-import { zh, search as zhSearch } from './zh'
+import {defineConfig} from 'vitepress'
+import {zh, search as zhSearch} from './zh'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -18,13 +18,13 @@ export default defineConfig({
 
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/yixiaco/ruoyi-tdesign' },
+      {icon: 'github', link: 'https://github.com/yixiaco/ruoyi-tdesign'},
     ],
 
     search: {
       provider: 'local',
       options: {
-        locales: { ...zhSearch }
+        locales: {...zhSearch}
       }
     },
 
@@ -33,7 +33,7 @@ export default defineConfig({
   srcDir: './src',
 
   locales: {
-    root: { label: '简体中文', ...zh },
+    root: {label: '简体中文', ...zh},
   }
 
 })

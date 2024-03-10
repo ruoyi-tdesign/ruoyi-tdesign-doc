@@ -49,7 +49,7 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {text: '首页', link: '/'},
-    {text: '文档', link: '/guide/markdown-examples', activeMatch: '/guide/'},
+    {text: '文档', link: '/guide/dev-run', activeMatch: '/guide/'},
     {
       text: pgk.version, items: [
         {

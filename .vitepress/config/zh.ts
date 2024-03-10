@@ -15,7 +15,7 @@ export const zh = defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/yixiaco/ruoyi-tdesign-doc/edit/main/docs/:path',
+      pattern: 'https://github.com/yixiaco/ruoyi-tdesign-doc/edit/main/src/:path',
       text: '在 GitHub 上编辑此页面'
     },
 

@@ -11,7 +11,7 @@ export const zh = defineConfig({
     nav: nav(),
 
     sidebar: {
-      '/guide/': {base: '/guide/', items: sidebarGuide()},
+      '/guide/': {base: '/guide/', items: sidebarGuide('/guide/')},
     },
 
     editLink: {
@@ -65,13 +65,24 @@ function nav(): DefaultTheme.NavItem[] {
   ]
 }
 
-function sidebarGuide(): DefaultTheme.SidebarItem[] {
+function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
   return [
     {
       text: '快速开始',
       items: [
         {text: '在开发环境中运行', link: 'dev-run'},
-        {text: '部署', link: 'deploy'},
+        {
+          text: '应用部署', collapsed: false,base: `${base}/deploy/`, items: [
+            {text: '手动部署', link: 'manual-deploy'},
+            {text: 'docker部署', link: 'docker-deploy'},
+            {text: 'docker-compose部署', link: 'docker-compose-deploy'},
+          ]
+        },
+      ]
+    },
+    {
+      text: '框架功能', items: [
+        {text: '项目结构', link: 'project-structure'}
       ]
     }
   ]

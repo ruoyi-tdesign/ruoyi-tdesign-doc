@@ -53,6 +53,10 @@ function nav(): DefaultTheme.NavItem[] {
     {
       text: pgk.version, items: [
         {
+          text: '项目简介',
+          link: 'https://github.com/yixiaco/ruoyi-tdesign/blob/main/README.md'
+        },
+        {
           text: '变更日志',
           link: 'https://github.com/yixiaco/ruoyi-tdesign/blob/main/CHANGELOG.md'
         },
@@ -64,10 +68,10 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Examples',
+      text: '快速开始',
       items: [
-        {text: 'Markdown Examples', link: 'markdown-examples'},
-        {text: 'Runtime API Examples', link: 'api-examples'}
+        {text: '在开发环境中运行', link: 'dev-run'},
+        {text: '部署', link: 'deploy'},
       ]
     }
   ]

@@ -4,7 +4,7 @@ import pgk from '../../package.json';
 
 export const zh = defineConfig({
   lang: 'zh',
-  title: "Ruoyi-TDesign项目文档",
+  title: "Ruoyi-TDesign",
   description: "ruoyi-tdesign 是重写 RuoYi-Vue-Plus UI的场景及其他功能场景的升级(不兼容原框架)。遵循前后端分离，后端采用Springboot，前端采用Vue3+Typescript+TDesignUI。",
 
   themeConfig: {

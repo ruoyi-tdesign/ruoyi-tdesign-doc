@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Ruoyi-TDesign文档"
+  name: "Ruoyi-TDesign"
   text: "Springboot3和Vue3+TS+TDesign前后端分离"
   tagline: ruoyi-tdesign 是重写 RuoYi-Vue-Plus UI的场景及其他功能场景的升级(不兼容原框架)。
   actions:
@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: Gitee
       link: https://gitee.com/yixiacoco/ruoyi-tdesign
+    - theme: alt
+      text: Doc Github
+      link: https://github.com/yixiaco/ruoyi-tdesign-doc
 
 features:
   - title: 多租户

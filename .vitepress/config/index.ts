@@ -14,7 +14,7 @@ export default defineConfig({
   head: [
     [
       'script',
-      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-4G6JMEEB05' }
+      {async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-4G6JMEEB05'}
     ],
     [
       'script',

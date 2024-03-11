@@ -72,7 +72,7 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
       items: [
         {text: '在开发环境中运行', link: 'dev-run'},
         {
-          text: '应用部署', collapsed: false,base: `${base}/deploy/`, items: [
+          text: '应用部署', collapsed: false, base: `${base}/deploy/`, items: [
             {text: '手动部署', link: 'manual-deploy'},
             {text: 'docker部署', link: 'docker-deploy'},
             {text: 'docker-compose部署', link: 'docker-compose-deploy'},
@@ -81,10 +81,11 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
       ]
     },
     {
-      text: '框架功能', items: [
+      text: '框架功能', collapsed: false, items: [
         {text: '项目结构', link: 'project-structure'}
       ]
-    }
+    },
+    {text: '常见问题', link: 'issue'}
   ]
 }
 

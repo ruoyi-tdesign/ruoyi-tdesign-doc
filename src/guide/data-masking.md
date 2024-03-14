@@ -50,5 +50,66 @@ public class POJO {
     private String bankCard;
 }
 ```
+
+## 支持角色
+```java
+public class POJO {
+    @Sensitive(strategy = SensitiveStrategy.BANK_CARD, roleKey = "common")
+    private String bankCard;
+}
+```
+只要拥有`common`角色，就不进行脱敏处理
+::: tip
+自 `1.2.0` 之后的版本支持多角色，与角色关系 `AND` 和 `OR` 的处理
+:::
+
+## 支持权限
+```java
+public class POJO {
+    @Sensitive(strategy = SensitiveStrategy.BANK_CARD, perms = "system:user:query")
+    private String bankCard;
+}
+```
+只要拥有`system:user:query`菜单权限，就不进行脱敏处理
+::: tip
+自 `1.2.0` 之后的版本支持多权限，与权限关系 `AND` 和 `OR` 的处理
+:::
+
 ## 自定义策略
 在类 `org/dromara/common/sensitive/core/SensitiveStrategy.java` 下修改添加自定义策略
+
+## 忽略脱敏策略
+::: tip
+自 `1.2.0` 之后的版本支持忽略脱敏策略
+:::
+
+::: code-group
+
+```java [Class]
+@SensitiveIgnore
+public class POJO {
+    /** 在类的属性中使用了@Sensitive */
+    private Sub sub;
+}
+```
+
+```java [Field]
+public class POJO {
+    /** 在类的属性中使用了@Sensitive */
+    @SensitiveIgnore
+    private Sub sub;
+}
+```
+
+```java [Method]
+public class POJO {
+    /** 在类的属性中使用了@Sensitive */
+    private Sub sub;
+
+    @SensitiveIgnore
+    public Sub getSub() {
+        return this.sub;
+    }
+}
+```
+:::

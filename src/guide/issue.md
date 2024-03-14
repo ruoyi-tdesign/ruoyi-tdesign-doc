@@ -58,3 +58,31 @@ v1.1.0版本 已支持租户套餐变更后，同步到所有租户上
 由于非授权页面，例如客户端首页，小程序首页等无需登录即可访问的页面，由于没有用户信息，因此后端读取不到租户id。
 
 此时可以使用租户管理下的应用管理，在请求头中携带X-APP-KEY，可以路由到指定的租户下。这个key可以是一个域名、appid等任何可以标识用户租户身份的值。
+
+## bean of type 'XXXMapper' that could not be found.导致启动报错 
+
+例如以下报错信息：
+
+::: details 报错信息
+```java
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in org.dromara.system.service.impl.SysTenantServiceImpl required a bean of type 'org.dromara.system.mapper.SysUserMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.dromara.system.mapper.SysUserMapper' in your configuration.
+```
+:::
+
+此时可以排查在 `ruoyi-common` 文件夹下是否多出一个 `target` 目录，该目录会导致启动报错
+
+修复步骤： 使用maven clean > 重新加载Maven项目（刷新maven） > 重新启动项目(重新编译)

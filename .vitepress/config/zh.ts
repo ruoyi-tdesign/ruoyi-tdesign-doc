@@ -86,6 +86,7 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
         {
           text: '基础功能', collapsed: true, items: [
             {text: '数据脱敏', link: 'data-masking'},
+            {text: 'websocket', link: 'websocket'},
           ]
         },
       ]

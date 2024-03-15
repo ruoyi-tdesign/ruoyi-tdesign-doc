@@ -9,6 +9,10 @@ export default defineConfig({
     theme: {
       light: 'github-light',
       dark: 'github-dark'
+    },
+    image: {
+      // 图片懒加载
+      lazyLoading: true
     }
   },
   head: [

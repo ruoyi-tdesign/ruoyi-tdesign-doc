@@ -26,7 +26,7 @@ jar包部署后端服务 打包命令如下
 
 3.2.0及以上
 
-```mvn
+```shell
 mvn clean package -D maven.test.skip=true -P prod
 ```
 ::: tip 提示

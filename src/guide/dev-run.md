@@ -22,7 +22,7 @@
    重新加载（刷新maven）后等待maven下载完成
 
 4. 使用快捷键 `Ctrl+Alt+Shift+S` 打开项目结构，选择`项目（Project）> SDK`
-   ![project-sdk.png](../assets/dev-run/project-sdk.png)
+   ![project-sdk.png](../assets/images/dev-run/project-sdk.png)
     选择下载好的sdk，推荐使用openJdk或者graalvmJDK的17或21版本  
     此处选择的版本应该与根目录下的 `pom.xml > java.version` 中配置的版本一致  
 
@@ -73,9 +73,9 @@ Redis-windows: https://github.com/tporadowski/redis/releases
 以上环境准备完成后，我们就可以启动项目。
 1. 首先配置数据库与Redis  
     - 数据库配置：
-    ![img2.png](../assets/dev-run/img2.png)
+    ![img2.png](../assets/images/dev-run/img2.png)
     - Redis配置：
-    ![img3.png](../assets/dev-run/img3.png)
+    ![img3.png](../assets/images/dev-run/img3.png)
 2. 启动后端Admin监控服务（非必要）  
     启动类位置：`ruoyi-extend/ruoyi-monitor-admin/src/main/java/org/dromara/monitor/admin/MonitorAdminApplication.java`
 3. 启动PowerJob定时任务启动类（非必要）  
@@ -86,8 +86,8 @@ Redis-windows: https://github.com/tporadowski/redis/releases
 4. 启动后端主程序开发环境  
     如需要Admin监控服务或PowerJob服务，需要先启动，并在`ruoyi-admin/src/main/resources/application-dev.yml`中开启对应的开关  
     启动后台系统：
-    ![img.png](../assets/dev-run/img.png)
+    ![img.png](../assets/images/dev-run/img.png)
 5. 启动前端开发环境  
     点击dev左边的绿色按钮
-    ![img4.png](../assets/dev-run/img4.png)
+    ![img4.png](../assets/images/dev-run/img4.png)
     或者使用`npm run dev`命令运行

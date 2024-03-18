@@ -84,7 +84,13 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
       text: '框架功能', collapsed: false, items: [
         {text: '项目结构', link: 'project-structure'},
         {
-          text: '基础功能', collapsed: true, items: [
+          text: '基础功能', collapsed: false, items: [
+            {text: 'OSS功能', link: 'oss'},
+            {text: 'OSS规则', link: 'oss-rule'},
+          ]
+        },
+        {
+          text: '扩展功能', collapsed: false, items: [
             {text: '数据脱敏', link: 'data-masking'},
             {text: 'websocket', link: 'websocket'},
           ]

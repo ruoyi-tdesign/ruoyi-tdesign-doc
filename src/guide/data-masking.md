@@ -78,7 +78,7 @@ public class POJO {
 ## 自定义策略
 在类 `org/dromara/common/sensitive/core/SensitiveStrategy.java` 下修改添加自定义策略
 
-## 忽略脱敏策略
+## 忽略脱敏策略 <Badge type="tip" text=">1.2.0" />
 使用 `@SensitiveIgnore` 注解标注在需要忽略属性的类或属性中
 ::: tip
 自 `1.2.0` 之后的版本支持忽略脱敏策略

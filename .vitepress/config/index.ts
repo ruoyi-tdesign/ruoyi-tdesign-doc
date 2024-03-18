@@ -33,7 +33,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     // @ts-ignore
     lastUpdated: true,
-
+    outline: 3,
 
     socialLinks: [
       {icon: 'github', link: 'https://github.com/yixiaco/ruoyi-tdesign'},

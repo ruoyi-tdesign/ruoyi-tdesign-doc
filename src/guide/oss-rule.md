@@ -45,7 +45,13 @@ OSS规则是直接在url做修改，需要根据不同的厂商配置不同的�
 
 使用默认规则
 ::: code-group
-```java [java]
+```java [java <Badge type="tip" text=">1.2.0" />]
+public class POJO {
+    @OssRule
+    private String url;
+}
+```
+```java [java <Badge type="tip" text="<=1.2.0" />]
 public class POJO {
     @Translation(type = TransConstant.OSS_RULE)
     private String url;
@@ -59,7 +65,13 @@ public class POJO {
 
 使用指定规则
 ::: code-group
-```java [java]
+```java [java <Badge type="tip" text=">1.2.0" />]
+public class POJO {
+    @OssRule("80x80")
+    private String url;
+}
+```
+```java [java <Badge type="tip" text="<=1.2.0" />]
 public class POJO {
     @Translation(type = TransConstant.OSS_RULE, other = "80x80")
     private String url;
@@ -69,3 +81,63 @@ public class POJO {
 <image-preview :src="row.url_80x80" width="60px" height="60px"/>
 ```
 :::
+
+::: tip
+自 `1.2.0` 之后的版本将使用 `@OssRule` 注解替代 `@Translation(type = TransConstant.OSS_RULE)`，同时提供一些更高级的用法
+:::
+
+`OssRule` 的定义：
+
+```java
+@Inherited
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.FIELD, ElementType.METHOD})
+@Documented
+@JacksonAnnotationsInside
+@JsonSerialize(using = OssRuleHandler.class)
+public @interface OssRule {
+
+    /**
+     * 使用指定的规则
+     */
+    String[] value() default {};
+
+    /**
+     * 指定规则时，是否使用默认规则。
+     * <p>{@link OssRule#value}不存在时，即使是false也将使用默认规则
+     */
+    boolean useDefault() default false;
+
+    /**
+     * 字段与规则的连接符
+     */
+    String join() default "_";
+
+    /**
+     * 映射字段 (如果不为空则取此字段的值)
+     */
+    String mapper() default "";
+
+    /**
+     * 包装方式
+     */
+    PackingMethod packingMethod() default PackingMethod.UNWRAPPED;
+
+    /**
+     * 包装名称。
+     * 包装方式为{@link PackingMethod#WRAPPED}时，值将包装在该字段中
+     * 字段包装规则：fieldName + wrapName()
+     */
+    String wrapName() default "Wrap";
+
+    /**
+     * 包装方式
+     */
+    enum PackingMethod {
+        /** 包装。将url包装到同一个字段中 */
+        WRAPPED,
+        /** 不包装。直接在列表中展示 */
+        UNWRAPPED
+    }
+}
+```

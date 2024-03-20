@@ -21,7 +21,7 @@ jdk.tls.disabledAlgorithms=SSLv3, RC4, DES, MD5withRSA, \
 
 ## 未能读取到有效Token
 
-1. 由于使用了单项目多用户配置的原因，需要在 `application.yml` 文件中加入自定义的url用来对应不同用户对应需要检验的url
+由于使用了单项目多用户配置的原因，需要在 `application.yml` 文件中加入自定义的url用来对应不同用户对应需要检验的url
     ```yaml
     sa-token:
       multiple:
@@ -34,7 +34,6 @@ jdk.tls.disabledAlgorithms=SSLv3, RC4, DES, MD5withRSA, \
             - /resource/**
             - /demo/**
     ```
-2. 在非web环境下，需要包装到 `TenantHelper.ignore` 中执行或使用 `@DynamicTenant` 注解中读取租户
 
 ## 租户套餐修改后，权限没有变化
 
@@ -53,11 +52,91 @@ v1.1.0版本 已支持租户套餐变更后，同步到所有租户上
 
 ## 读取不到租户
 
+### 场景一：定时任务
+由于定时任务无携带任何租户信息，也无需租户标识，调用需要租户的函数会导致读取不到租户后报错。此时应该在定时任务中标识 `@IgnoreTenant` 注解
+```java
+public @interface IgnoreTenant {
+    /**
+     * 对事务生效
+     */
+    boolean db() default true;
+    /**
+     * 对缓存生效
+     * 全局缓存使用{@link org.dromara.common.core.constant.GlobalConstants.GLOBAL_REDIS_KEY}或设置该参数为true
+     */
+    boolean cache() default false;
+}
+```
+在定时任务中使用
+```java
+@Component
+public class BizJobs {
+
+    /**
+     * 每分钟执行任务
+     */
+    @IgnoreTenant
+    @EventListener
+    public void everyMinute(EveryMinuteJobEvent jobEvent) {
+        // 业务代码
+    }
+}
+
+```
+:::tip
+`IgnoreTenant#cache` 并不建议开启，因为在租户中与忽略租户中的缓存key并不相同，因此如果有需要保持一致的情况下，应该使用全局缓存而不是忽略它们之间的差异
+:::
+
+### 场景二：消息队列
+消息队列可以在发送消息时携带租户信息，那么建议使用动态租户的方式<br/>
+我们以 `ruoyi-common-amqp` 依赖为例
+```java
+@Service
+public class BizServiceImpl
+    @Autowired
+    private AmqpEventPublisher amqpEventPublisher;
+    
+    public void demo() {
+      // 业务消息类继承该类即可
+      TenantMQMessage message = new TenantMQMessage();
+      amqpEventPublisher.commitSend(BizAmqpExchange.SEND_TEST, message);
+    }
+}
+```
+消费端使用 `@DynamicTenant` 注解, `#{#msg.tenantId}` 是一个SpEL表达式，从`TenantMQMessage`对象中获取 `tenantId` 属性值作为租户id
+```java
+@Component
+public class BizReceiver {
+
+    @DynamicTenant(value  = "#{#msg.tenantId}")
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue(value = BizAmqpExchange.SEND_TEST + AmqpEventPublisher.QUEUE),
+            exchange = @Exchange(value = BizAmqpExchange.SEND_TEST, type = ExchangeTypes.FANOUT)
+    ))
+    @Transactional(rollbackFor = Exception.class)
+    public void refundChange(TenantMQMessage msg) {
+        // 业务代码
+    }
+}
+```
+::: tip
+在非web环境下，需要包装到 `TenantHelper.ignore` 中执行或使用 `@DynamicTenant` 注解中读取租户
+:::
+### 场景三：无需登录的页面访问
+
 用户自身携带租户标识，因此进入需要授权的页面时，能够读取用户绑定的租户。
 
-由于非授权页面，例如客户端首页，小程序首页等无需登录即可访问的页面，由于没有用户信息，因此后端读取不到租户id。
+但非授权页面，例如客户端首页，小程序首页等无需登录即可访问的页面，由于没有用户信息，因此后端读取不到租户id。
 
 此时可以使用租户管理下的应用管理，在请求头中携带X-APP-KEY，可以路由到指定的租户下。这个key可以是一个域名、appid等任何可以标识用户租户身份的值。
+
+进入 `租户管理 > 应用管理` 新建应用管理。该应用绑定当前登录用户的租户，不同租户映射不同的多个应用。
+
+![img.png](../assets/images/issue/img.png)
+
+::: tip
+应用key即使在不同租户下也不能重复
+:::
 
 ## bean of type 'XXXMapper' that could not be found.导致启动报错 
 

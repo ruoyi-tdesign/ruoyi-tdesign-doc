@@ -22,18 +22,18 @@ jdk.tls.disabledAlgorithms=SSLv3, RC4, DES, MD5withRSA, \
 ## 未能读取到有效Token
 
 由于使用了单项目多用户配置的原因，需要在 `application.yml` 文件中加入自定义的url用来对应不同用户对应需要检验的url
-    ```yaml
-    sa-token:
-      multiple:
-        login:
-          match:
-            - /tool/gen/**
-            - /auth/**
-            - /system/**
-            - /monitor/**
-            - /resource/**
-            - /demo/**
-    ```
+```yaml
+sa-token:
+  multiple:
+    login:
+      match:
+        - /tool/gen/**
+        - /auth/**
+        - /system/**
+        - /monitor/**
+        - /resource/**
+        - /demo/**
+```
 
 ## 租户套餐修改后，权限没有变化
 

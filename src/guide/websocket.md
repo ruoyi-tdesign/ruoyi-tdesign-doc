@@ -2,7 +2,7 @@
 
 ## 配置说明
 ::: code-group
-```yaml [application.yml]
+```yaml [application.yml <Badge type="tip" text=">1.2.0" />]
 --- # websocket
 websocket:
   # 如果关闭 需要和前端开关一起关闭
@@ -19,6 +19,16 @@ websocket:
       paths: /front/biz/websocket
       # 设置自定义处理器需要继承AbstractCustomWebSocketHandler或实现ICustomWebSocketHandler
       handler: org.dromara.biz.websocket.BizWebSocketHandler
+```
+```yaml [application.yml  <Badge type="tip" text="<=1.2.0" />]
+--- # websocket，1.2.0版本及以下不支持多账号类型
+websocket:
+  # 如果关闭 需要和前端开关一起关闭
+  enabled: true
+  # websocket连接路径：ws://localhost:8080/resource/websocket
+  path: /resource/websocket
+  # 设置访问源地址
+  allowedOrigins: '*'
 ```
 :::
 * enabled 是否开启此功能

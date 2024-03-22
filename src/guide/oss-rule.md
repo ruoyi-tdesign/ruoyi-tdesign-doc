@@ -141,3 +141,24 @@ public @interface OssRule {
     }
 }
 ```
+
+**包装方式影响最终输出的字段类型值**
+
+未包装
+```json
+{
+  "url": "https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png",
+  "url_180x180": "https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png?x-oss-process=image/auto-orient,1/resize,m_lfit,w_180/quality,q_90"
+}
+```
+
+包装后
+```json
+{
+  "url": "https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png",
+  "urlWrap": {
+    "url": "https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png",
+    "url_180x180": "https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png?x-oss-process=image/auto-orient,1/resize,m_lfit,w_180/quality,q_90"
+  }
+}
+```

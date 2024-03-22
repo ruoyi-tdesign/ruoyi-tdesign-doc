@@ -92,6 +92,7 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
         },
         {
           text: '扩展功能', collapsed: false, items: [
+            {text: '翻译功能', link: 'translation'},
             {text: '数据脱敏', link: 'data-masking'},
             {text: 'websocket', link: 'websocket'},
           ]

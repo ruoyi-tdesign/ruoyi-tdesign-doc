@@ -87,6 +87,7 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
           text: '基础功能', collapsed: false, items: [
             {text: 'OSS功能', link: 'oss'},
             {text: 'OSS规则', link: 'oss-rule'},
+            {text: '消息功能', link: 'message'},
           ]
         },
         {

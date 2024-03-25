@@ -19,7 +19,7 @@ jdk.tls.disabledAlgorithms=SSLv3, RC4, DES, MD5withRSA, \
   DH keySize < 1024, EC keySize < 224, 3DES_EDE_CBC, anon, NULL
 ```
 
-## 未能读取到有效Token
+## 未能读取到有效Token（登录状态已过期）
 
 由于使用了单项目多用户配置的原因，需要在 `application.yml` 文件中加入自定义的url用来对应不同用户对应需要检验的url
 ```yaml
@@ -103,12 +103,13 @@ public class BizServiceImpl
     }
 }
 ```
-消费端使用 `@DynamicTenant` 注解, `#{#msg.tenantId}` 是一个SpEL表达式，从`TenantMQMessage`对象中获取 `tenantId` 属性值作为租户id
+消费端使用 `@DynamicTenant` 注解, `#msg.tenantId` 是一个SpEL表达式，从`TenantMQMessage`对象中获取 `tenantId` 属性值作为租户id
 ```java
 @Component
 public class BizReceiver {
 
-    @DynamicTenant(value  = "#{#msg.tenantId}")
+    // 1.2.0及以下版本请使用 #{#msg.tenantId} 写法
+    @DynamicTenant(value  = "#msg.tenantId")
     @RabbitListener(bindings = @QueueBinding(
             value = @Queue(value = BizAmqpExchange.SEND_TEST + AmqpEventPublisher.QUEUE),
             exchange = @Exchange(value = BizAmqpExchange.SEND_TEST, type = ExchangeTypes.FANOUT)
@@ -120,6 +121,7 @@ public class BizReceiver {
 }
 ```
 ::: tip
+1.2.0及以下版本请使用 `#{#msg.tenantId}` 写法，1.2.0以上版本使用 `#msg.tenantId`<br/>
 在非web环境下，需要包装到 `TenantHelper.ignore` 中执行或使用 `@DynamicTenant` 注解中读取租户
 :::
 ### 场景三：无需登录的页面访问
@@ -161,7 +163,18 @@ Action:
 Consider defining a bean of type 'org.dromara.system.mapper.SysUserMapper' in your configuration.
 ```
 :::
+![img3.png](../assets/images/issue/img3.png)
 
 此时可以排查在 `ruoyi-common` 文件夹下是否多出一个 `target` 目录，该目录会导致启动报错
 
 修复步骤： 使用maven clean > 重新加载Maven项目（刷新maven） > 重新启动项目(重新编译)
+
+![img1.png](../assets/images/issue/img1.png)
+
+## No static resource biz/xxx/list.
+
+![img2.png](../assets/images/issue/img2.png)
+
+这个错误说明的意思是你的接口不存在，并且也不存在这个静态资源。
+
+很明显，你的接口所在的模块没有引入到启动类模块中。

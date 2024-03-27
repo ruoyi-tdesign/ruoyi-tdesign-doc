@@ -61,8 +61,8 @@ public @interface IgnoreTenant {
      */
     boolean db() default true;
     /**
-     * 对缓存生效
-     * 全局缓存使用{@link org.dromara.common.core.constant.GlobalConstants.GLOBAL_REDIS_KEY}或设置该参数为true
+     * 对缓存生效，效果与使用全局缓存一致
+     * 全局缓存使用{@link org.dromara.common.core.constant.GlobalConstants#GLOBAL_REDIS_KEY}或设置该参数为true
      */
     boolean cache() default false;
 }

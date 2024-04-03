@@ -94,6 +94,7 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
         },
         {
           text: '扩展功能', collapsed: false, items: [
+            {text: '多数据源', link: 'extended/dynamic-datasource'},
             {text: '翻译功能', link: 'extended/translation'},
             {text: '数据脱敏', link: 'extended/data-masking'},
             {text: 'websocket', link: 'extended/websocket'},

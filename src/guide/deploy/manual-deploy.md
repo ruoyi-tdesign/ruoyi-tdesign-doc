@@ -1,5 +1,9 @@
 # 在Linux中手动部署
 
+::: tip
+部署前打包jar前，请确保切换到生产环境中。[生产环境切换](./environment-switching.md)
+:::
+
 在服务器安装 `OpenJdk17` `mysql`、`redis`、`nginx`、`minio(可选)`
 
 ## 软件介绍

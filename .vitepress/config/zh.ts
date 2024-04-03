@@ -72,10 +72,11 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
       items: [
         {text: '在开发环境中运行', link: 'dev-run'},
         {
-          text: '应用部署', collapsed: false, base: `${base}/deploy/`, items: [
-            {text: '手动部署', link: 'manual-deploy'},
-            {text: 'docker部署', link: 'docker-deploy'},
-            {text: 'docker-compose部署', link: 'docker-compose-deploy'},
+          text: '应用部署', collapsed: false, items: [
+            {text: '生产环境切换', link: 'deploy/environment-switching'},
+            {text: '手动部署', link: 'deploy/manual-deploy'},
+            {text: 'docker部署', link: 'deploy/docker-deploy'},
+            {text: 'docker-compose部署', link: 'deploy/docker-compose-deploy'},
           ]
         },
       ]
@@ -101,8 +102,8 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
     },
     {text: '常见问题', link: 'issue'},
     {
-      text: 'IDEA使用技巧', collapsed: false, base: `${base}/idea/`, items: [
-        {text: 'IDEA使用Git技巧', link: 'idea-git'}
+      text: 'IDEA使用技巧', collapsed: false, items: [
+        {text: 'IDEA使用Git技巧', link: 'idea/idea-git'}
       ]
     },
   ]

@@ -15,17 +15,23 @@
 
 ## 功能配置
 ### 配置OSS
+
 进入 `系统管理 -> 对象存储 -> OSS配置管理` 填写对应的OSS服务相关配置
-![img.png](../assets/images/oss/img.png)
-![img1.png](../assets/images/oss/img1.png)
+
+![img.png](../../assets/images/basic/oss/img.png)
+
+![img1.png](../../assets/images/basic/oss/img1.png)
+
 ::: tip
 云厂商只需修改 `访问站点` 对应的域 切勿乱改(云厂商强烈建议绑定自定义域名使用 七牛云必须绑定[官方规定])
 :::
 
 ### 切换OSS
+
 > 再配置列表点击 `状态` 按钮开启即可(注意: 只能开启一个OSS默认配置)<br/>
 > 手动使用 `OssFactory.instance("configKey")`
-![img2.png](../assets/images/oss/img2.png)
+
+![img2.png](../../assets/images/basic/oss/img2.png)
 
 ### 上传图片或文件
 进入 `系统管理 -> 对象存储 -> 文件管理` 点击 `上传文件` 或 `上传图片` 根据选项选择即可<br/>
@@ -37,7 +43,7 @@
 ## 我的文件
 进入 `系统管理 -> 对象存储 -> 我的文件`
 
-![img3.png](../assets/images/oss/img3.png)
+![img3.png](../../assets/images/basic/oss/img3.png)
 
 `文件管理` 与 `我的文件` 的区别：<br/>
 1. 在 `我的文件` 中每个用户将只能看到自己上传的文件

@@ -28,4 +28,4 @@ ossUrl翻译(直接翻译) 直接根据此字段值翻译后替换此字段值
 
 实现接口 `TranslationInterface` 或继承 `SimpleTranslationImpl` 标注注解 `@TranslationType` 可参考框架默认实现
 
-![img.png](../assets/images/translation/img.png)
+![img.png](../../assets/images/extended/translation/img.png)

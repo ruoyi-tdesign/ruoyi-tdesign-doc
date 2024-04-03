@@ -86,16 +86,17 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
         {text: '项目结构', link: 'project-structure'},
         {
           text: '基础功能', collapsed: false, items: [
-            {text: 'OSS功能', link: 'oss'},
-            {text: 'OSS规则', link: 'oss-rule'},
-            {text: '消息功能', link: 'message'},
+            {text: '分页功能', link: 'basic/pagination'},
+            {text: 'OSS功能', link: 'basic/oss'},
+            {text: 'OSS规则', link: 'basic/oss-rule'},
+            {text: '消息功能', link: 'basic/message'},
           ]
         },
         {
           text: '扩展功能', collapsed: false, items: [
-            {text: '翻译功能', link: 'translation'},
-            {text: '数据脱敏', link: 'data-masking'},
-            {text: 'websocket', link: 'websocket'},
+            {text: '翻译功能', link: 'extended/translation'},
+            {text: '数据脱敏', link: 'extended/data-masking'},
+            {text: 'websocket', link: 'extended/websocket'},
           ]
         },
       ]

@@ -9,9 +9,9 @@ OSS规则是直接在url做修改，需要根据不同的厂商配置不同的�
 ## 创建规则
 进入 `系统管理 -> 对象存储 -> OSS处理规则`
 
-![img.png](../assets/images/oss-rule/img.png)
+![img.png](../../assets/images/basic/oss-rule/img.png)
 
-![img.png](../assets/images/oss-rule/img2.png)
+![img2.png](../../assets/images/basic/oss-rule/img2.png)
 
 #### 规则名称
 

@@ -99,7 +99,12 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
         },
       ]
     },
-    {text: '常见问题', link: 'issue'}
+    {text: '常见问题', link: 'issue'},
+    {
+      text: 'IDEA使用技巧', collapsed: false, base: `${base}/idea/`, items: [
+        {text: 'IDEA使用Git技巧', link: 'idea-git'}
+      ]
+    },
   ]
 }
 

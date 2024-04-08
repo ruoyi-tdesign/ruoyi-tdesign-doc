@@ -3,7 +3,7 @@
 ## 重点说明
 
 > 项目使用 [pagehelper](https://github.com/pagehelper/Mybatis-PageHelper) 分页插件 实现分页功能 <br>
-> 同时也支持 `mybatis-plus` 分页插件 实现分页功能 大致用法与 MP 一致 [MP分页文档](https://baomidou.com/pages/97710a/)
+> 同时也支持 `mybatis-plus` 分页插件 实现分页功能 大致用法与 MP 一致 [MP分页文档](https://baomidou.com/pages/97710a/) <br>
 > 项目禁止分页合理化 页数溢出 例如: 一共5页 查了第6页 默认返回空数据 <br>
 
 ## 使用pagehelper插件分页

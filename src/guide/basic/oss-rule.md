@@ -24,11 +24,16 @@ OSS规则是直接在url做修改，需要根据不同的厂商配置不同的�
 只有指定的媒体类型才使用规则，其他类型不做处理，多个媒体类型使用逗号进行分割。例如图片 `image/png,image/jpg`
 #### 规则
 
-内置domain、path、filename、url变量，使用#{#url}的方式使用。<br/>例如url为：https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png
-* domain:`https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com`
-* path:`2024/03/18`
-* filename:`fd623a4b99824cbb8aa6cf289b513adb.png`
-* url：`https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png`
+内置domain、path、filename、url变量，使用#{#url}的方式使用。<br/>例如url为：https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png?x-oss-process=image/auto-orient,1/resize,m_lfit,w_180/quality,q_90
+
+* domain: `https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com`
+* path: `2024/03/18`
+* fullPath: `/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png`
+* filename: `fd623a4b99824cbb8aa6cf289b513adb.png`
+* url: `https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png`
+* fullUrl: `https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com?x-oss-process=image/auto-orient,1/resize,m_lfit,w_180/quality,q_90`
+* query: `x-oss-process=image/auto-orient,1/resize,m_lfit,w_180/quality,q_90`
+
 #### 是否默认
 
 不指定规则时，使用该规则

@@ -4,6 +4,7 @@ import {zh, search as zhSearch} from './zh'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/ruoyi-tdesign-doc/',
+  ignoreDeadLinks: true,
   markdown: {
     lineNumbers: true,
     theme: {

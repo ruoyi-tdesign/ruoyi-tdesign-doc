@@ -26,7 +26,7 @@
 | @ApiModelProperty(hidden = true) | @Schema(accessMode = READ_ONLY) | 无                  | 
 | @ApiResponse                     | @ApiResponse                    | java方法@return返回值注释 | 
 
-# 建议使用 `Apifox`(常见问题有其他对接方式)
+## 建议使用 `Apifox`(常见问题有其他对接方式)
 
 官网连接: [https://www.apifox.cn/](https://www.apifox.cn/) <br>
 视频教程: [springdoc与apifox配合使用](https://www.bilibili.com/video/BV1mr4y1j75M?p=8&vd_source=8f52c77be3233dbdd1c5e332d4d45bfb)
@@ -34,7 +34,7 @@
 ![img.png](../../assets/images/framework/api-doc/img.png)
 支持 文档编写 接口调试 Mock 接口压测 自动化测试 等一系列功能
 
-### 接入框架
+## 接入框架
 
 ### 1.下载或使用web在线版 创建一个自己的项目
 
@@ -74,7 +74,7 @@ springdoc:
       packages-to-scan: org.dromara.generator
 ```
 
-![输入图片说明](https://foruda.gitee.com/images/1678976527495742967/79836e7f_1766278.png "屏幕截图")
+![img_6.png](../../assets/images/framework/api-doc/img_6.png)
 
 > 4.选择 接口管理 项目概览 点击立即导入 并等待导入完成<br>
 后续会根据策略每3个小时自动导入一次<br>

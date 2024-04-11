@@ -91,6 +91,7 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
           text: '框架相关', collapsed: false, items: [
             {text: '创建新模块', link: 'framework/new-module'},
             {text: 'Api接口文档', link: 'framework/api-doc'},
+            {text: '国际化', link: 'framework/i18n'},
           ]
         },
         {

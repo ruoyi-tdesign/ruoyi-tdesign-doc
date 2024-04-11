@@ -75,8 +75,8 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
         {
           text: '应用部署', collapsed: false, items: [
             {text: '生产环境切换', link: 'deploy/environment-switching'},
-            {text: '搭建Admin监控', link: 'deploy/admin_init'},
-            {text: '搭建PowerJob任务调度中心', link: 'deploy/power_job_init'},
+            {text: '搭建Admin监控', link: 'deploy/admin-init'},
+            {text: '搭建PowerJob任务调度中心', link: 'deploy/power-job-init'},
             {text: '手动部署', link: 'deploy/manual-deploy'},
             {text: 'docker部署', link: 'deploy/docker-deploy'},
             {text: 'docker-compose部署', link: 'deploy/docker-compose-deploy'},
@@ -89,7 +89,8 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
         {text: '项目结构', link: 'project-structure'},
         {
           text: '框架相关', collapsed: false, items: [
-            {text: '创建新模块', link: 'framework/new_module'},
+            {text: '创建新模块', link: 'framework/new-module'},
+            {text: 'Api接口文档', link: 'framework/api-doc'},
           ]
         },
         {
@@ -98,7 +99,7 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
             {text: 'OSS功能', link: 'basic/oss'},
             {text: 'OSS规则', link: 'basic/oss-rule'},
             {text: '消息功能', link: 'basic/message'},
-            {text: '接口放行', link: 'basic/interface_release'},
+            {text: '接口放行', link: 'basic/interface-release'},
           ]
         },
         {

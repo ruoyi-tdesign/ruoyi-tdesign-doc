@@ -88,6 +88,11 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
       text: '框架功能', collapsed: false, items: [
         {text: '项目结构', link: 'project-structure'},
         {
+          text: '框架相关', collapsed: false, items: [
+            {text: '创建新模块', link: 'framework/new_module'},
+          ]
+        },
+        {
           text: '基础功能', collapsed: false, items: [
             {text: '分页功能', link: 'basic/pagination'},
             {text: 'OSS功能', link: 'basic/oss'},

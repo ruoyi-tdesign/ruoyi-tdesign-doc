@@ -35,11 +35,11 @@ mvn clean package -D maven.test.skip=true -P prod
 ```
 ::: tip 提示
 IntelliJ IDEA软件可以使用maven侧边栏按钮打包。配置文件需要切换到 `prod` 模式下
-![img2.png](../../assets/images/deploy/img2.png)
+![img2.png](../../assets/images/deploy/manual-deploy/img2.png)
 :::
 
 服务器需创建临时文件存储目录与配置文件对应(无此目录上传文件会报错)
-![img.png](../../assets/images/deploy/img.png)
+![img.png](../../assets/images/deploy/manual-deploy/img.png)
 
 ## 运行
 将编译完成的文件 `target/ruoyi-admin.jar` 上传到Linux服务器端。 
@@ -54,7 +54,7 @@ nohup /www/server/java/jdk-17.0.8/bin/java -jar -Xmx1024M -Xms1024M /www/ruoyi-t
 :::
 ### 2.使用宝塔运行
 在 `网站 > Java项目 > 添加Java项目 > Spring_boot` 中填写具体信息
-![img3.png](../../assets/images/deploy/img3.png)
+![img3.png](../../assets/images/deploy/manual-deploy/img3.png)
 
 如使用admin项目，则需要勾选`前后端分离`
 

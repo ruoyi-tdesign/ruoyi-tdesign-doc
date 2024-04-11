@@ -1,6 +1,6 @@
 # 生产环境切换
 
-![img4.png](../../assets/images/deploy/img4.png)
+![img4.png](../../assets/images/deploy/environment-switching/img1.png)
 
 **步骤：**
 1. 点击Maven

@@ -90,6 +90,7 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
             {text: 'OSS功能', link: 'basic/oss'},
             {text: 'OSS规则', link: 'basic/oss-rule'},
             {text: '消息功能', link: 'basic/message'},
+            {text: '接口放行', link: 'basic/interface_release'},
           ]
         },
         {

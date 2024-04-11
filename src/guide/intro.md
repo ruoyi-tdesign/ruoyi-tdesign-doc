@@ -55,7 +55,7 @@
 
 ## 软件架构图
 
-![Plus部署架构图](https://images.gitee.com/uploads/images/2021/1112/202137_673ac5d2_1766278.png "Plus部署架构图.png")
+![部署架构图.png](../assets/images/intro/部署架构图.png)
 ## 贡献代码
 
 欢迎各路英雄豪杰 `PR` 代码 请提交到 `dev` 开发分支 统一测试发版

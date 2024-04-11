@@ -67,6 +67,7 @@ function nav(): DefaultTheme.NavItem[] {
 
 function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
   return [
+    {text: '项目简介', link: 'intro'},
     {
       text: '快速开始',
       items: [

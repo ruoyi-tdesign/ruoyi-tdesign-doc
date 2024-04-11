@@ -40,6 +40,7 @@ spring.boot.admin.client:
 
 ```nginx configuration
 http {
+    # 负载均衡，如不需要，可直接替换到以下地址中
     upstream monitor-admin {
         server 127.0.0.1:9090;
     }
@@ -53,7 +54,7 @@ http {
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header REMOTE-HOST $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_pass http://monitor-admin/admin/;
+            proxy_pass http://monitor-admin/admin/; #使用负载均衡地址
         }
     }
 }

@@ -75,6 +75,7 @@ function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
           text: '应用部署', collapsed: false, items: [
             {text: '生产环境切换', link: 'deploy/environment-switching'},
             {text: '搭建Admin监控', link: 'deploy/admin_init'},
+            {text: '搭建PowerJob任务调度中心', link: 'deploy/power_job_init'},
             {text: '手动部署', link: 'deploy/manual-deploy'},
             {text: 'docker部署', link: 'deploy/docker-deploy'},
             {text: 'docker-compose部署', link: 'deploy/docker-compose-deploy'},

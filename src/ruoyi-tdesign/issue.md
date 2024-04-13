@@ -136,7 +136,7 @@ public class BizReceiver {
 
 进入 `租户管理 > 应用管理` 新建应用管理。该应用绑定当前登录用户的租户，不同租户映射不同的多个应用。
 
-![img.png](../assets/images/issue/img.png)
+![img.png](../assets/images/ruoyi-tdesign/issue/img.png)
 
 ::: tip
 应用key即使在不同租户下也不能重复
@@ -165,17 +165,17 @@ Action:
 Consider defining a bean of type 'org.dromara.system.mapper.SysUserMapper' in your configuration.
 ```
 :::
-![img3.png](../assets/images/issue/img3.png)
+![img3.png](../assets/images/ruoyi-tdesign/issue/img3.png)
 
 此时可以排查在 `ruoyi-common` 文件夹下是否多出一个 `target` 目录，该目录会导致启动报错
 
 修复步骤： 使用maven clean > 重新加载Maven项目（刷新maven） > 重新启动项目(重新编译)
 
-![img1.png](../assets/images/issue/img1.png)
+![img1.png](../assets/images/ruoyi-tdesign/issue/img1.png)
 
 ## No static resource biz/xxx/list.
 
-![img2.png](../assets/images/issue/img2.png)
+![img2.png](../assets/images/ruoyi-tdesign/issue/img2.png)
 
 这个错误说明的意思是你的接口不存在，并且也不存在这个静态资源。
 

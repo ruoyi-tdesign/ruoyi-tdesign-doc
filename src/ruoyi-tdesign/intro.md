@@ -55,7 +55,7 @@
 
 ## 软件架构图
 
-![部署架构图.png](../assets/images/intro/部署架构图.png)
+![部署架构图.png](../assets/images/ruoyi-tdesign/intro/部署架构图.png)
 ## 贡献代码
 
 欢迎各路英雄豪杰 `PR` 代码 请提交到 `dev` 开发分支 统一测试发版
@@ -105,17 +105,17 @@
 
 |                                            |                                        |
 |--------------------------------------------|----------------------------------------|
-| ![登录页.png](../assets/images/intro/登录页.png) | ![](../assets/images/intro/首页.png)     |
-| ![](../assets/images/intro/用户管理.png)       | ![](../assets/images/intro/角色管理.png)   |
-| ![](../assets/images/intro/菜单管理.png)       | ![](../assets/images/intro/部门管理.png)   |
-| ![](../assets/images/intro/岗位管理.png)       | ![](../assets/images/intro/字典管理.png)   |
-| ![](../assets/images/intro/字典数据.png)       | ![](../assets/images/intro/参数管理.png)   |
-| ![](../assets/images/intro/通知公告.png)       | ![](../assets/images/intro/操作日志.png)   |
-| ![](../assets/images/intro/OSS配置管理.png)    | ![](../assets/images/intro/文件管理.png)   |
-| ![](../assets/images/intro/OSS处理规则.png)    | ![](../assets/images/intro/消息配置.png)   |
-| ![](../assets/images/intro/消息常量.png)       | ![](../assets/images/intro/消息模板.png)   |
-| ![](../assets/images/intro/消息发送记录.png)     | ![](../assets/images/intro/客户端管理.png)  |
-| ![](../assets/images/intro/租户管理.png)       | ![](../assets/images/intro/租户套餐管理.png) |
-| ![](../assets/images/intro/应用管理.png)       | ![](../assets/images/intro/登录日志.png)   |
-| ![](../assets/images/intro/在线用户.png)       | ![](../assets/images/intro/缓存监控.png)   |
-| ![](../assets/images/intro/代码生成.png)       | ![](../assets/images/intro/个人中心.png)   |
+| ![登录页.png](../assets/images/ruoyi-tdesign/intro/登录页.png) | ![](../assets/images/ruoyi-tdesign/intro/首页.png)     |
+| ![](../assets/images/ruoyi-tdesign/intro/用户管理.png)       | ![](../assets/images/ruoyi-tdesign/intro/角色管理.png)   |
+| ![](../assets/images/ruoyi-tdesign/intro/菜单管理.png)       | ![](../assets/images/ruoyi-tdesign/intro/部门管理.png)   |
+| ![](../assets/images/ruoyi-tdesign/intro/岗位管理.png)       | ![](../assets/images/ruoyi-tdesign/intro/字典管理.png)   |
+| ![](../assets/images/ruoyi-tdesign/intro/字典数据.png)       | ![](../assets/images/ruoyi-tdesign/intro/参数管理.png)   |
+| ![](../assets/images/ruoyi-tdesign/intro/通知公告.png)       | ![](../assets/images/ruoyi-tdesign/intro/操作日志.png)   |
+| ![](../assets/images/ruoyi-tdesign/intro/OSS配置管理.png)    | ![](../assets/images/ruoyi-tdesign/intro/文件管理.png)   |
+| ![](../assets/images/ruoyi-tdesign/intro/OSS处理规则.png)    | ![](../assets/images/ruoyi-tdesign/intro/消息配置.png)   |
+| ![](../assets/images/ruoyi-tdesign/intro/消息常量.png)       | ![](../assets/images/ruoyi-tdesign/intro/消息模板.png)   |
+| ![](../assets/images/ruoyi-tdesign/intro/消息发送记录.png)     | ![](../assets/images/ruoyi-tdesign/intro/客户端管理.png)  |
+| ![](../assets/images/ruoyi-tdesign/intro/租户管理.png)       | ![](../assets/images/ruoyi-tdesign/intro/租户套餐管理.png) |
+| ![](../assets/images/ruoyi-tdesign/intro/应用管理.png)       | ![](../assets/images/ruoyi-tdesign/intro/登录日志.png)   |
+| ![](../assets/images/ruoyi-tdesign/intro/在线用户.png)       | ![](../assets/images/ruoyi-tdesign/intro/缓存监控.png)   |
+| ![](../assets/images/ruoyi-tdesign/intro/代码生成.png)       | ![](../assets/images/ruoyi-tdesign/intro/个人中心.png)   |

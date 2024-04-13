@@ -34,7 +34,7 @@ powerjob:
 > 在 `扩展项目 -> powerjob-server模块` 启动
 > 需修改配置文件数据库连接地址(**注意: 此处为ruoyi-powerjob-server服务的配置文件**)
 
-![img.png](../../assets/images/deploy/power_job_init/img.png)
+![img.png](../../assets/images/ruoyi-tdesign/deploy/power_job_init/img.png)
 
 > 也可配置邮件发送 钉钉推送 和 mongodb存储
 

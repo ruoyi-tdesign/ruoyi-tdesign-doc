@@ -5,9 +5,9 @@
 
 ## 使用IDEA工具创建模块
 
-![img.png](../../assets/images/framework/new_module/img.png)
+![img.png](../../assets/images/ruoyi-tdesign/framework/new_module/img.png)
 
-![img_1.png](../../assets/images/framework/new_module/img_1.png)
+![img_1.png](../../assets/images/ruoyi-tdesign/framework/new_module/img_1.png)
 
 ## 需要改动的pom文件
 

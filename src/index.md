@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /guide/dev-run
+      link: /ruoyi-tdesign/intro
     - theme: alt
       text: Github
       link: https://github.com/yixiaco/ruoyi-tdesign

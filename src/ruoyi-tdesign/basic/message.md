@@ -4,7 +4,7 @@
 
 进入 `系统管理 -> 消息管理 -> 消息配置` 填写对应的消息配置
 
-![img.png](../../assets/images/basic/message/img.png)
+![img.png](../../assets/images/ruoyi-tdesign/basic/message/img.png)
 
 ::: tip
 此处可以配置多个消息配置，例如可以有多个不同的邮箱配置、短信配置。不同消息模板可以配置不同的消息配置。
@@ -40,7 +40,7 @@ public class CaptchaController {
 ## 消息模板
 进入 `系统管理 -> 消息管理 -> 消息模板` 填写不同平台的消息模板
 
-![img2.png](../../assets/images/basic/message/img2.png)
+![img2.png](../../assets/images/ruoyi-tdesign/basic/message/img2.png)
 
 例如这是一个新订单消息，使用的是腾讯短信平台。系统使用 `消息类型+消息key(消息常量)` 来作为唯一值，从而来确定应该使用哪条模板来发送消息。
 ### 消息key
@@ -92,4 +92,4 @@ messageSendService.send(MessageConstants.ORDER_RECEIVE, MessageTypeEnum.SMS, pho
 
 最终消息发送完成后，最终渲染后的字符串将记入到 `消息发送记录`
 
-![img3.png](../../assets/images/basic/message/img3.png)
+![img3.png](../../assets/images/ruoyi-tdesign/basic/message/img3.png)

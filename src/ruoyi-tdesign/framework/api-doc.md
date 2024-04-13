@@ -31,18 +31,18 @@
 官网连接: [https://www.apifox.cn/](https://www.apifox.cn/) <br>
 视频教程: [springdoc与apifox配合使用](https://www.bilibili.com/video/BV1mr4y1j75M?p=8&vd_source=8f52c77be3233dbdd1c5e332d4d45bfb)
 
-![img.png](../../assets/images/framework/api-doc/img.png)
+![img.png](../../assets/images/ruoyi-tdesign/framework/api-doc/img.png)
 支持 文档编写 接口调试 Mock 接口压测 自动化测试 等一系列功能
 
 ## 接入框架
 
 ### 1.下载或使用web在线版 创建一个自己的项目
 
-![img_1.png](../../assets/images/framework/api-doc/img_1.png)
+![img_1.png](../../assets/images/ruoyi-tdesign/framework/api-doc/img_1.png)
 
 ### 2.进入项目 选择项目设置 选择导入数据 找到定时导入
 
-![img_2.png](../../assets/images/framework/api-doc/img_2.png)
+![img_2.png](../../assets/images/ruoyi-tdesign/framework/api-doc/img_2.png)
 
 ### 3.根据项目内所有文档组完成所有数据源创建(拉取后端`openapi`结构体)<br>
 数据源URL格式 `http://后端ip:端口/v3/api-docs/组名`<br>
@@ -53,7 +53,7 @@
 `http://localhost:8080/v3/api-docs/4.代码生成模块` <br>
 也可不分组统一导入: `http://localhost:8080/v3/api-docs` <br>
 
-![img_3.png](../../assets/images/framework/api-doc/img_3.png)
+![img_3.png](../../assets/images/ruoyi-tdesign/framework/api-doc/img_3.png)
 
 application.yml 文件
 ```yaml
@@ -74,18 +74,18 @@ springdoc:
       packages-to-scan: org.dromara.generator
 ```
 
-![img_6.png](../../assets/images/framework/api-doc/img_6.png)
+![img_6.png](../../assets/images/ruoyi-tdesign/framework/api-doc/img_6.png)
 
 > 4.选择 接口管理 项目概览 点击立即导入 并等待导入完成<br>
 后续会根据策略每3个小时自动导入一次<br>
 每次重新进入apifox也会自动同步一次<br>
 后端有改动也可以手动点击导入<br>
 
-![img_4.png](../../assets/images/framework/api-doc/img_4.png)
+![img_4.png](../../assets/images/ruoyi-tdesign/framework/api-doc/img_4.png)
 
 > 5.设置鉴权 选择接口管理 项目概览 找到Auth 按照如下配置
 
-![img_5.png](../../assets/images/framework/api-doc/img_5.png)
+![img_5.png](../../assets/images/ruoyi-tdesign/framework/api-doc/img_5.png)
 
 > key对应项目配置 默认为 `Authorization`
 

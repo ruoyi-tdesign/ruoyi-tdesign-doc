@@ -11,7 +11,7 @@ export const zh = defineConfig({
     nav: nav(),
 
     sidebar: {
-      '/guide/': {base: '/guide/', items: sidebarGuide('/guide/')},
+      '/ruoyi-tdesign/': {base: '/ruoyi-tdesign/', items: sidebarRuoyiTdesign('/ruoyi-tdesign/')},
     },
 
     editLink: {
@@ -49,7 +49,7 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {text: '首页', link: '/'},
-    {text: '文档', link: '/guide/dev-run', activeMatch: '/guide/'},
+    {text: '后端文档', link: '/ruoyi-tdesign/dev-run', activeMatch: '/ruoyi-tdesign/'},
     {
       text: pgk.version, items: [
         {
@@ -65,7 +65,7 @@ function nav(): DefaultTheme.NavItem[] {
   ]
 }
 
-function sidebarGuide(base = ''): DefaultTheme.SidebarItem[] {
+function sidebarRuoyiTdesign(base = ''): DefaultTheme.SidebarItem[] {
   return [
     {text: '项目简介', link: 'intro'},
     {

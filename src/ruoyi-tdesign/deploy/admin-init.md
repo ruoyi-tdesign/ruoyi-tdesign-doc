@@ -24,16 +24,16 @@ spring.boot.admin.client:
 在 `扩展项目 -> 监控模块` 启动 <br>
 在监控模块对应的 `yml` 配置文件 可设置登录的账号密码与访问路径
 
-![img.png](../../assets/images/deploy/admin_init/img.png)
+![img.png](../../assets/images/ruoyi-tdesign/deploy/admin_init/img.png)
 
 ## 前端修改admin监控访问路径
 `dev`环境 默认使用 `.env.development` 配置文件内地址
 
-![img_1.png](../../assets/images/deploy/admin_init/img_1.png)
+![img_1.png](../../assets/images/ruoyi-tdesign/deploy/admin_init/img_1.png)
 
 `prod`环境 使用 `.env.production` 本机路由
 
-![img_2.png](../../assets/images/deploy/admin_init/img_2.png)
+![img_2.png](../../assets/images/ruoyi-tdesign/deploy/admin_init/img_2.png)
 
 故而 `prod` 环境只需更改 `nginx` 反向代理路径即可 <br>
 打开文件： `script/docker/nginx/conf/nginx.conf`

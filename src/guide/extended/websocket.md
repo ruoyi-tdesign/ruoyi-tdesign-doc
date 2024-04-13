@@ -2,7 +2,7 @@
 
 ## 配置说明
 ::: code-group
-```yaml [application.yml <Badge type="tip" text=">1.2.0" />]
+```yaml [application.yml <Badge type="tip" text="1.3.0" />]
 --- # websocket
 websocket:
   # 如果关闭 需要和前端开关一起关闭
@@ -20,7 +20,7 @@ websocket:
       # 设置自定义处理器需要继承AbstractCustomWebSocketHandler或实现ICustomWebSocketHandler
       handler: org.dromara.biz.websocket.BizWebSocketHandler
 ```
-```yaml [application.yml  <Badge type="tip" text="<=1.2.0" />]
+```yaml [application.yml  <Badge type="info" text="1.2.0" />]
 --- # websocket，1.2.0版本及以下不支持多账号类型
 websocket:
   # 如果关闭 需要和前端开关一起关闭
@@ -37,7 +37,7 @@ websocket:
 * handler 自定义处理器
 
 ::: tip
-自 `1.2.0` 之后的版本支持多账号类型以及自定义处理器
+自 `1.3.0` 起版本支持多账号类型以及自定义处理器
 :::
 
 **重点: 如关闭ws功能需连同前端ws开关一同关闭 不然前端启动会报错**

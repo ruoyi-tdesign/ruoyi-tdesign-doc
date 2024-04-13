@@ -60,7 +60,7 @@ public class POJO {
 ```
 只要拥有`common`角色，就不进行脱敏处理
 ::: tip
-自 `1.2.0` 之后的版本支持多角色，与角色关系 `AND` 和 `OR` 的处理
+自 `1.3.0` 起版本支持多角色，与角色关系 `AND` 和 `OR` 的处理
 :::
 
 ## 支持权限
@@ -72,16 +72,16 @@ public class POJO {
 ```
 只要拥有`system:user:query`菜单权限，就不进行脱敏处理
 ::: tip
-自 `1.2.0` 之后的版本支持多权限，与权限关系 `AND` 和 `OR` 的处理
+自 `1.3.0` 起版本支持多权限，与权限关系 `AND` 和 `OR` 的处理
 :::
 
 ## 自定义策略
 在类 `org/dromara/common/sensitive/core/SensitiveStrategy.java` 下修改添加自定义策略
 
-## 忽略脱敏策略 <Badge type="tip" text=">1.2.0" />
+## 忽略脱敏策略 <Badge type="tip" text="1.3.0" />
 使用 `@SensitiveIgnore` 注解标注在需要忽略属性的类或属性中
 ::: tip
-自 `1.2.0` 之后的版本支持忽略脱敏策略
+自 `1.3.0` 起版本支持忽略脱敏策略
 :::
 
 ::: code-group

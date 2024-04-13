@@ -69,7 +69,7 @@ public class CaptchaController {
 ```
 此时会自动生成一个变量属性 `1:${1}`。
 
-第一个 `1` 是变量名称，也是实际会发送到短信平台的变量名称，在其他平台它可能会具有更有意思名字，例如：`code`。
+第一个 `1` 是变量名称，也是实际会发送到短信平台的变量名称，在其他平台它可能会具有更有意义名字，例如：`code`。
 
 第二个 `${1}` 是一个代码变量，由 `messageSendService.send(MessageConstants.LOGIN_CAPTCHA, MessageTypeEnum.SMS, phonenumber, map);` 中的map里面的key，因此这个名称你可以自由定义它。所以这里我将它重新命名为 `${orderSn}`。
 
@@ -82,7 +82,7 @@ map.put("timestamp", "1711092438431");
 messageSendService.send(MessageConstants.ORDER_RECEIVE, MessageTypeEnum.SMS, phonenumber, map);
 ```
 
-那么最终我们的到的将是 `1:123456-1711092438431`。很明显，此处的`1`由多个值组成，它更加地灵活，最终渲染后的字符串应该是
+那么最终我们得到的将是 `1:123456-1711092438431`。很明显，此处的`1`由多个值组成，它更加地灵活，最终渲染后的字符串应该是
 
 ```text
 您有一份新的订单，请及时查看。 订单号：123456-1711092438431

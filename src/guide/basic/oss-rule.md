@@ -28,11 +28,11 @@ OSS规则是直接在url做修改，需要根据不同的厂商配置不同的�
 
 * domain: `https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com`
 * path: `2024/03/18`
-* fullPath: `/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png`
+* fullPath <Badge type="tip" text="1.3.0" />: `/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png`
 * filename: `fd623a4b99824cbb8aa6cf289b513adb.png`
 * url: `https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com/2024/03/18/fd623a4b99824cbb8aa6cf289b513adb.png`
-* fullUrl: `https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com?x-oss-process=image/auto-orient,1/resize,m_lfit,w_180/quality,q_90`
-* query: `x-oss-process=image/auto-orient,1/resize,m_lfit,w_180/quality,q_90`
+* fullUrl <Badge type="tip" text="1.3.0" />: `https://ruoyi-tdesign.oss-cn-hangzhou.aliyuncs.com?x-oss-process=image/auto-orient,1/resize,m_lfit,w_180/quality,q_90`
+* query <Badge type="tip" text="1.3.0" />: `x-oss-process=image/auto-orient,1/resize,m_lfit,w_180/quality,q_90`
 
 #### 是否默认
 
@@ -49,20 +49,20 @@ OSS规则是直接在url做修改，需要根据不同的厂商配置不同的�
 
 ::: tip
 * 媒体类型针对url的文件后缀自动生成，因此应该考虑上传时使用正确的后缀名称。
-* 自 `1.2.0` 之后的版本支持将id自动转为url
+* 自 `1.3.0` 起版本支持将id自动转为url
 :::
 
 ## 使用方式
 
 使用默认规则
 ::: code-group
-```java [java <Badge type="tip" text=">1.2.0" />]
+```java [java <Badge type="tip" text="1.3.0" />]
 public class POJO {
     @OssRule
     private String url;
 }
 ```
-```java [java <Badge type="tip" text="<=1.2.0" />]
+```java [java <Badge type="info" text="1.2.0" />]
 public class POJO {
     @Translation(type = TransConstant.OSS_RULE)
     private String url;
@@ -76,13 +76,13 @@ public class POJO {
 
 使用指定规则
 ::: code-group
-```java [java <Badge type="tip" text=">1.2.0" />]
+```java [java <Badge type="tip" text="1.3.0" />]
 public class POJO {
     @OssRule("80x80")
     private String url;
 }
 ```
-```java [java <Badge type="tip" text="<=1.2.0" />]
+```java [java <Badge type="info" text="1.2.0" />]
 public class POJO {
     @Translation(type = TransConstant.OSS_RULE, other = "80x80")
     private String url;
@@ -94,7 +94,7 @@ public class POJO {
 :::
 
 ::: tip
-自 `1.2.0` 之后的版本将使用 `@OssRule` 注解替代 `@Translation(type = TransConstant.OSS_RULE)`，同时提供一些更高级的用法
+自 `1.3.0` 起版本将使用 `@OssRule` 注解替代 `@Translation(type = TransConstant.OSS_RULE)`，同时提供一些更高级的用法
 :::
 
 `OssRule` 的定义：

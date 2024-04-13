@@ -114,11 +114,10 @@ public class BizReceiver {
     // 1.2.0及以下版本请使用 #{#msg.tenantId} 写法
     @DynamicTenant(value  = "#msg.tenantId")
     @RabbitListener(bindings = @QueueBinding(
-            value = @Queue(value = BizAmqpExchange.SEND_TEST + AmqpEventPublisher.QUEUE),
+            value = @Queue(value = BizAmqpExchange.SEND_TEST_QUEUE),
             exchange = @Exchange(value = BizAmqpExchange.SEND_TEST, type = ExchangeTypes.FANOUT)
     ))
-    @Transactional(rollbackFor = Exception.class)
-    public void refundChange(TenantMQMessage msg) {
+    public void test(TenantMQMessage msg) {
         // 业务代码
     }
 }

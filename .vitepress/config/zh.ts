@@ -96,6 +96,7 @@ function sidebarRuoyiTdesign(base = ''): DefaultTheme.SidebarItem[] {
         },
         {
           text: '基础功能', collapsed: false, items: [
+            {text: '系统用户相关', link: 'basic/user'},
             {text: '分页功能', link: 'basic/pagination'},
             {text: 'OSS功能', link: 'basic/oss'},
             {text: 'OSS规则', link: 'basic/oss-rule'},

@@ -97,12 +97,13 @@ public class BizJobs {
 @Service
 public class BizServiceImpl
     @Autowired
-    private AmqpEventPublisher amqpEventPublisher;
-    
+    private AmqpTransactionalTemplate amqpTransactionalTemplate;
+
+    @Transactional(rollbackFor = Exception.class)
     public void demo() {
       // 业务消息类继承该类即可
       TenantMQMessage message = new TenantMQMessage();
-      amqpEventPublisher.commitSend(BizAmqpExchange.SEND_TEST, message);
+      amqpTransactionalTemplate.convertAndSend(BizAmqpExchange.SEND_TEST, message).commit();
     }
 }
 ```

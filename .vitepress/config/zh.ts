@@ -50,6 +50,7 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {text: '首页', link: '/'},
     {text: '后端文档', link: '/ruoyi-tdesign/dev-run', activeMatch: '/ruoyi-tdesign/'},
+    {text: '原框架文档', link: 'https://plus-doc.dromara.org/#/ruoyi-vue-plus/home'},
     {
       text: pgk.version, items: [
         {
@@ -102,6 +103,7 @@ function sidebarRuoyiTdesign(base = ''): DefaultTheme.SidebarItem[] {
             {text: 'OSS规则', link: 'basic/oss-rule'},
             {text: '消息功能', link: 'basic/message'},
             {text: '接口放行', link: 'basic/interface-release'},
+            {text: '多租户功能', link: 'basic/tenant'},
           ]
         },
         {

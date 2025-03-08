@@ -12,13 +12,13 @@ hero:
       link: /ruoyi-tdesign/intro
     - theme: alt
       text: Github
-      link: https://github.com/yixiaco/ruoyi-tdesign
+      link: https://github.com/ruoyi-tdesign/ruoyi-tdesign
     - theme: alt
       text: Gitee
       link: https://gitee.com/yixiacoco/ruoyi-tdesign
     - theme: alt
       text: Doc Github
-      link: https://github.com/yixiaco/ruoyi-tdesign-doc
+      link: https://github.com/ruoyi-tdesign/ruoyi-tdesign-doc
 
 features:
   - title: 多租户

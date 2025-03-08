@@ -37,7 +37,7 @@ export default defineConfig({
     outline: 3,
 
     socialLinks: [
-      {icon: 'github', link: 'https://github.com/yixiaco/ruoyi-tdesign'},
+      {icon: 'github', link: 'https://github.com/ruoyi-tdesign/ruoyi-tdesign'},
     ],
 
     search: {

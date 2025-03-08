@@ -15,13 +15,13 @@ export const zh = defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/yixiaco/ruoyi-tdesign-doc/edit/main/src/:path',
+      pattern: 'https://github.com/ruoyi-tdesign/ruoyi-tdesign-doc/edit/main/src/:path',
       text: '在 GitHub 上编辑此页面'
     },
 
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: `版权所有 © 2023-${new Date().getFullYear()} Yixiacoco`
+      copyright: `版权所有 © 2023-${new Date().getFullYear()} Yixiaco`
     },
 
     docFooter: {
@@ -55,11 +55,11 @@ function nav(): DefaultTheme.NavItem[] {
       text: pgk.version, items: [
         {
           text: '项目简介',
-          link: 'https://github.com/yixiaco/ruoyi-tdesign/blob/main/README.md'
+          link: 'https://github.com/ruoyi-tdesign/ruoyi-tdesign/blob/main/README.md'
         },
         {
           text: '变更日志',
-          link: 'https://github.com/yixiaco/ruoyi-tdesign/blob/main/CHANGELOG.md'
+          link: 'https://github.com/ruoyi-tdesign/ruoyi-tdesign/blob/main/CHANGELOG.md'
         },
       ]
     },

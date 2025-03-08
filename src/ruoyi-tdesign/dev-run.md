@@ -7,7 +7,7 @@
     IntelliJ IDEA是java编程语言的集成开发环境。IntelliJ在业界被公认为最好的Java开发工具，尤其在智能代码助手、代码自动提示、重构、JavaEE支持、各类版本工具(git、svn等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能。
     :::
     下载地址：https://www.jetbrains.com/zh-cn/idea/download/
-2. 在 `file > open` 中打开下载好的项目文件根目录[`ruoyi-tdesign`](https://github.com/yixiaco/ruoyi-tdesign/archive/refs/heads/main.zip)。或者使用Git拉取项目
+2. 在 `file > open` 中打开下载好的项目文件根目录[`ruoyi-tdesign`](https://github.com/ruoyi-tdesign/ruoyi-tdesign/archive/refs/heads/main.zip)。或者使用Git拉取项目
 3. 在 `file > settings(Ctrl+Alt+S)`打开设置，在设置中搜索Maven，设置maven的根目录或者直接使用绑定的maven，设置自定义的配置文件，推荐使用阿里云仓库  
     Maven官网（apache-maven-3.x-bin.zip）：https://maven.apache.org/download.cgi  
     阿里云仓库配置

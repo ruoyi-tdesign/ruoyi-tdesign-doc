@@ -104,17 +104,16 @@ server
         return 403;
     }
 
-
     # HTTP反向代理相关配置开始 >>>
     location ~ /purge(/.*) {
         proxy_cache_purge cache_one $Host$request_uri$is_args$args;
     }
-    
+
     # 限制外网访问内网 actuator 相关路径
-    location ~ ^(/[^/]*)?/actuator(/.*)?$ {
+    location ~ ^(/[^/]*)?/actuator.*(/.*)?$ {
         return 403;
     }
-    
+
     location / {
         root   /www/wwwroot/ruoyi-tdesign/html/admin;
         try_files $uri $uri/ /index.html;

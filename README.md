@@ -82,6 +82,8 @@ pnpm run preview
 
 本地开发环境默认访问：`http://localhost:5173/ruoyi-tdesign-doc/`
 
+在线访问地址：https://ruoyi-tdesign.github.io/ruoyi-tdesign-doc/
+
 ---
 
 ## 📚 文档结构

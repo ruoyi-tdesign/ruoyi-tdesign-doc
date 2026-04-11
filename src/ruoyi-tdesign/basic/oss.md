@@ -1,4 +1,4 @@
-# OSS功能
+# OSS功能<Badge type="warning" text="v1.4.1版本已不建议使用" /><Badge type="danger" text="v1.5以上版本废弃" />
 
 ## 重点注意事项
 `桶/存储区域` 系统会根据配置自行创建分配权限<br/>

@@ -1,22 +1,22 @@
 # 在Linux中使用docker部署
 
 ## 先决条件
-执行docker命令需要安装docker<br/>
+执行docker命令需要安装docker或者有打包服务的环境<br/>
+本地环境：<br/>
 windows平台安装Docker Desktop<br/>
 macOS/Linux平台使用命令安装docker即可
 
 ## 执行打包Docker镜像命令
+选择要打包镜像的服务，打包镜像之前需要先执行安装jar打包，确保完成install后再执行脚本
 ![img.png](../../assets/images/ruoyi-tdesign/deploy/docker-deploy/img.png)
-
-windows 平台执行docker_build.bat
-linux 平台执行docker_build.sh
-
-![img_1.png](../../assets/images/ruoyi-tdesign/deploy/docker-deploy/img_1.png)
-
-选择要打包镜像的服务，打包镜像之前需要先执行jar打包（此处请参考手动部署中的编译章节），确保完成package后再执行脚本
+:::tip 温馨提示
+不能是package，package只是打包，install需要将打包后的jar安装到本地maven仓库中
+:::
+执行install完成后，选择要打包的docker镜像的服务，执行打包镜像命令
+![img_7.png](../../assets/images/ruoyi-tdesign/deploy/docker-deploy/img_7.png)
 
 镜像打包依赖基础bellsoft/liberica-openjdk-debian:17.0.11-cds镜像，当前由于docker.io无法被正常访问，因此请使用代理进行下载
-::: tip
+:::tip 离线下载依赖
 没有代理的话可以使用我分享的文件下载到本地哦<br/>
 通过网盘分享的文件：liberica-openjdk-debian_17.0.11-cds.tar<br/>
 链接: https://pan.baidu.com/s/1ah18Hmwm19eLTd7zj7kp2w?pwd=c2b5 提取码: c2b5<br/>
@@ -28,11 +28,20 @@ docker load -i liberica-openjdk-debian_17.0.11-cds.tar
 :::
 
 ## 上传镜像
-这里的所有镜像也都需要上传到服务器中，上传方式有两种<br/>
+这里的所有镜像也都需要上传到服务器中，上传方式有三种<br/>
+### 使用docker插件push上传
+![img_8.png](../../assets/images/ruoyi-tdesign/deploy/docker-deploy/img_8.png)
+
+![img_9.png](../../assets/images/ruoyi-tdesign/deploy/docker-deploy/img_9.png)
+
+![img_4.png](../../assets/images/ruoyi-tdesign/deploy/docker-deploy/img_4.png)
+
+![img_5.png](../../assets/images/ruoyi-tdesign/deploy/docker-deploy/img_5.png)
+以上都配置正确之后，在docker插件中执行push命令
+![img_6.png](../../assets/images/ruoyi-tdesign/deploy/docker-deploy/img_6.png)
 ### 使用docker push上传
 windows平台修改insecure-registries配置，添加私服的地址，格式是`ip:port`<br/>
 ![img_3.png](../../assets/images/ruoyi-tdesign/deploy/docker-deploy/img_3.png)
-
 
 Linux平台，修改`/etc/docker/daemon.json`文件，添加如下内容
 ```json
@@ -80,7 +89,7 @@ docker load < bellsoft-liberica-openjdk-debian_17.0.11-cds.tar
 ```docker
 docker pull mysql:8.0.33
 ```
-::: tip
+::: tip 离线下载
 通过百度网盘分享的文件：mysql_8.0.33.tar<br/>
 链接: https://pan.baidu.com/s/10UPK2m3ckNwM3z82_Oo89A?pwd=ipuj
 提取码: ipuj
@@ -89,7 +98,7 @@ docker pull mysql:8.0.33
 ```docker
 docker pull redis:latest
 ```
-::: tip
+::: tip 离线下载
 通过百度网盘分享的文件：redis_latest.tar<br/>
 链接：https://pan.baidu.com/s/1jioJUtbPUez3d2c7ZmvcgA?pwd=88m7
 提取码：88m7
@@ -98,7 +107,7 @@ docker pull redis:latest
 ```docker
 docker pull nginx:latest
 ```
-::: tip
+::: tip 离线下载
 通过百度网盘分享的文件：nginx_latest.tar<br/>
 链接：https://pan.baidu.com/s/1h5JA-aaOti3lQwVLoQrTvA?pwd=88m7
 提取码：88m7
@@ -107,7 +116,7 @@ docker pull nginx:latest
 ```docker
 docker pull minio/minio:RELEASE.2023-04-13T03-08-07Z
 ```
-::: tip
+::: tip 离线下载
 通过百度网盘分享的文件：minio_RELEASE_2023-04-13T03-08-07Z.tar<br/>
 链接：https://pan.baidu.com/s/10pMTcrUwRdbCXlnr0l9lYw?pwd=88m7
 提取码：88m7
